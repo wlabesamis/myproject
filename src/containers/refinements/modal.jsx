@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Modal, Collapse, Well } from 'react-bootstrap'
+import { Button, Modal, Panel, PanelGroup } from 'react-bootstrap'
 
 class RefinementsModal extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-
-        this.state = {
-            open: false
-        };
-    }
-
     render() {
         return (
             <Modal
@@ -21,19 +13,26 @@ class RefinementsModal extends React.Component {
                     <Modal.Title id="contained-modal-title-lg">Refine Results</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Button onClick={() => this.setState({ open: !this.state.open })}>
-                        click
-                    </Button>
-                    <Collapse in={this.state.open}>
-                        <div>
-                            <Well>
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                accusamus terry richardson ad squid. Nihil anim keffiyeh
-                                helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                ea proident.
-                            </Well>
-                        </div>
-                    </Collapse>
+                    <PanelGroup id="accordion-example">
+                        <Panel eventKey="1">
+                            <Panel.Heading>
+                            <Panel.Toggle><Panel.Title>Shop By Part</Panel.Title></Panel.Toggle>
+                            </Panel.Heading>
+                            <Panel.Body collapsible>
+                                <p>Air Filter (4814)</p>
+                                <p>Seat Filter (2)</p>
+                            </Panel.Body>
+                        </Panel>
+                        <Panel eventKey="2">
+                            <Panel.Heading>
+                                <Panel.Toggle><Panel.Title>Shop By Brand</Panel.Title></Panel.Toggle>
+                            </Panel.Heading>
+                            <Panel.Body collapsible>
+                                <p>K&N (3)</p>
+                                <p>Denso (2)</p>
+                            </Panel.Body>
+                        </Panel>
+                    </PanelGroup>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={this.props.onHide}>Close</Button>
