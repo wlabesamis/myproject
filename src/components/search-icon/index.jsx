@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Image } from 'react-bootstrap';
+import './search-icon.scss';
 
-class SearchBar extends Component {
+class SearchIcon extends Component {
     render () {
         return (
-            <div style={{width:'20px', margin: '10px 0 0 10px' }}>
+            <div className="component-search-icon">
                 <Image src="https://cdn.mobify.com/sites/usap-jcw/production/static/svg/sprite-source/search.svg" responsive />
             </div>
         )
     }
 }
 
-export default SearchBar;
+export default SearchIcon;

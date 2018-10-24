@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+//Components
 import Header from "../../components/header";
 import HeroShot from "../../components/hero-shot";
 

@@ -3,8 +3,8 @@ import { Button, Modal, ButtonToolbar } from 'react-bootstrap'
 import RefinementsModal from './modal';
 
 class Refinements extends Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
         this.state = {
             show: false
@@ -12,11 +12,10 @@ class Refinements extends Component {
     }
 
     render() {
-        const wellStyles = {margin: '10px'};
         let show = () => this.setState({ show: false });
 
         return (
-            <div className="modal-container" style={wellStyles}>
+            <div className="modal-container uniform-container-style">
                 <ButtonToolbar>
                     <Button
                         bsStyle="primary"

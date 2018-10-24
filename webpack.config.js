@@ -8,6 +8,11 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.(s*)css$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
