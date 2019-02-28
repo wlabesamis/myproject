@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/wlabesamis/myproject",
   "scripts": {
-    "start": "webpack-dev-server --mode development --public 10.10.216.123:8080 --host 0.0.0.0 ",
+    "start": "webpack-dev-server --mode development --public 34.73.212.186:8080 --host 0.0.0.0 ",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -34,6 +34,7 @@
     "react-bootstrap": "^0.32.4",
     "react-dom": "16.3.2",
     "react-redux": "5.0.7",
+    "react-router-dom": "^4.3.1",
     "redux": "4.0.0",
     "redux-promise": "^0.6.0"
   }
